@@ -1,0 +1,16 @@
+.destaque-laranja {
+    background-color: orange;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding: 15px;  
+
+}
+
+.senha-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 100%;
+}
+

@@ -1,0 +1,535 @@
+
+body{
+  margin: 0%;
+  font-family: 'Germania One', system-ui;
+}
+
+body, header {
+  background: linear-gradient(to right, #140604, #1d0e03);
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+html {
+  color: white;
+  scroll-behavior: smooth;
+}
+
+ul li {
+  text-align: left;
+  list-style: none;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 100px;
+  margin-left: 100px;
+}
+
+h2 {
+  font-family: 'Germania One', system-ui;
+  font-size: 60px;
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  align-self: stretch;
+  border: none;
+  border-top: 2px solid #f3b200;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 56px;
+  font-weight: bold;
+  color: #f5f4f4;
+}
+
+.escanor_logo {
+  width: 120px;
+}
+
+.inv-conq {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px 40px;
+  text-align: left;
+}
+
+.bloco h3 {
+  text-align: center;
+  font-size: 28.8px;
+  margin: 0 0 20px;
+  text-shadow: 0 0 10px #f3b200;
+}
+
+.item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #f3b200;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(243, 178, 0, 0.6);
+}
+
+.item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.item-texto {
+  padding: 15px 20px;
+}
+
+.item-texto h4 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #f3b200;
+}
+
+.item-texto p {
+  margin: 0;
+  font-size: 17.6px;
+  line-height: 1.5;
+}
+
+.listaConquistas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.listaConquistas li {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #f3b200;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 17.6px;
+  line-height: 1.5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.listaConquistas li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 20px rgba(243, 178, 0, 0.6);
+}
+
+.cabecalho {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-top: 10px solid #000000;
+  margin: 0%;
+  width: 100%;
+  border-bottom: 4px solid #f3b200;
+  padding: 0 30px;
+}
+
+.barra_de_procura {
+  display: flex;
+  align-items: stretch;
+  margin-right: 300px;
+  border: 2px solid #f3b200;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.barra {
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+}
+
+.botao_barra {
+  border: none;
+  padding: 0 25px;
+  background: linear-gradient(to right, #f3b200, #ff6a00);
+  color: #140604;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botao_barra:hover {
+  border-radius: 15px;
+}
+
+.ConteudoEscanor {
+  min-height: calc(100vh - 200px);
+  width: 100%;
+  position: relative;
+}
+
+.infoEscanor {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 250px;
+}
+
+.imgEscanor {
+  margin-top: 6%;
+  mask-image:
+    linear-gradient(to bottom, black 80%, transparent),
+    linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-composite: intersect;
+}
+
+.divTabela {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 350px;
+  left: 70%;
+}
+
+.tabela_escanor {
+  width: 400px;
+}
+
+.ESCANOR {
+  margin-top: 400px;
+  margin-left: 105px;
+  font-size: 100px;
+}
+
+table {
+  overflow-x: auto;
+  top: 300px;
+}
+
+.listaAtributos {
+  text-align: center;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.listaAtributos li {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #f3b200;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.formas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0 40px;
+  text-align: left;
+}
+
+.forma h3 {
+  text-align: center;
+  font-size: 25.6px;
+  margin-bottom: 20px;
+}
+
+.forma ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.forma li {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #f3b200;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 17.6px;
+  line-height: 1.5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.forma li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(243, 178, 0, 0.6);
+}
+
+.forma:first-child li {
+  border-color: #6fa8ff;
+}
+
+.forma:last-child li {
+  border-color: #f3b200;
+}
+
+th {
+  background-color: #f3b200;
+  color: #140604;
+  font-weight: bold;
+  text-align: left;
+  padding: 12px;
+}
+
+td {
+  background-color: rgba(243, 178, 0, 0.08);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+a:hover {
+  color: #947c03;
+}
+
+.max {
+  min-height: calc(100vh - 200px);
+  width: 100%;
+  background: radial-gradient(circle at center, rgba(255, 140, 0, 0.25), transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+}
+
+.atributos {
+  position: relative;
+  border: 15px;
+  list-style: none;
+  padding: 0 20px;
+  gap: 15px;
+  margin-left: 100px;
+  padding: 0;
+  font-size: 20px;
+}
+
+.atributos a {
+  text-decoration: none;
+  color: #fdfcfc;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #ffb700;
+}
+
+.habilidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0 40px 40px;
+}
+
+.video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 15px;
+  border: 2px solid #f3b200;
+  box-shadow: 0 0 25px rgba(243, 178, 0, 0.4);
+}
+
+.listaHabilidades {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.listaHabilidades li {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #f3b200;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 17.6px;
+  line-height: 1.5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.listaHabilidades li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(243, 178, 0, 0.6);
+}
+
+.listaHabilidades strong {
+  color: #f3b200;
+}
+
+footer {
+  margin: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+    margin-left: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+
+  .tabela_escanor th, .tabela_escanor td {
+    word-break: break-word;
+    padding: 8px;
+  }
+
+  .ConteudoEscanor {
+    padding-top: 180px;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .imgEscanor {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    margin: 0;
+    opacity: 0.35;
+    z-index: 0;
+  }
+
+  .infoEscanor, .divTabela {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 1;
+  }
+
+  .divTabela {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px 15px;
+    gap: 8px;
+  }
+
+  .cabecalho form {
+    order: 3;
+    width: 100%;
+  }
+
+  .barra_de_procura {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .barra {
+    flex: 1;
+    min-width: 0;
+    padding: 8px 12px;
+  }
+
+  .tabela_escanor {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .escanor_logo {
+    max-width: 80px;
+  }
+
+  .atributos {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .formas {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .listaAtributos {
+    padding: 0;
+  }
+
+  .habilidades {
+    padding: 0 15px 30px;
+    gap: 20px;
+  }
+
+  .video {
+    border-radius: 10px;
+  }
+
+  .listaHabilidades {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .listaHabilidades li {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+
+  .inv-conq {
+    grid-template-columns: 1fr;
+    padding: 0 15px 30px;
+    gap: 30px;
+  }
+
+  .item img {
+    height: 250px;
+  }
+
+  .bloco h3 {
+    font-size: 24px;
+  }
+
+@media screen and (min-width: 412px) and (max-width: 1440px) {
