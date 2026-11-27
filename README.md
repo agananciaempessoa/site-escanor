@@ -14,7 +14,7 @@ Recursos utilizados:
 •	CSS3
 •	Flexbox - cabeçalho e menu de navegação
 •	CSS Grid - atributos, habilidades, inventário e conquistas
-•	JavaScrip - função de pesquisa de itens
+•	JavaScrip - função de pesquisa de itens, sistema de xp, inventário e cumprimento
 •	Layout responsivo
 •	Transições - transition e efeitos de hover
 •	Gradientes e sombras
