@@ -1,162 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Herói</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="tinkpro-1791526805381.png">
-    <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
-    <style>
-  
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escanor, o Pecado do Orgulho</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="img/sitelogo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
 </head>
 <body>
-      <header class="cabecalho">  
-      <img class="escanor_logo" src="img/image.png" alt="bugou">      
-      <div class="logo"></div>
-    <form action="">
+  <header class="cabecalho">
+    <img class="escanor_logo" src="img/image.png" alt="Brasão do Pecado do Orgulho, um leão dourado">
+
+    <form onsubmit="pesquisar(event)">
       <div class="barra_de_procura">
-      <input type="text" class="barra" placeholder="Pesquisar..." required>
-      <input type="submit" class="botao_barra"></button></div>
+        <input type="text" class="barra" id="campoBusca" placeholder="Pesquisar..." required>
+        <input type="submit" class="botao_barra" value="Buscar">
+      </div>
     </form>
-        <nav>
-          <ul class="menu">
+
+    <nav>
+      <ul class="menu">
         <li><a href="#sobre">Sobre o Herói</a></li>
+        <li><a href="#contato">Contato</a></li>
         <li><a href="html/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="ConteudoEscanor">
+      <img class="imgEscanor" src="img/escanor.jpg" alt="Escanor de costas com o braço levantado">
+
+      <div class="infoEscanor">
+        <h1>ESCANOR</h1>
+        <nav>
+          <ul class="links-topo">
+            <li><a href="#atributos">Atributos</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#inventario">Inventário &amp; Conquistas</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
         </nav>
+      </div>
 
-        </header>
-        <section id="sobre"></section>
+      <div class="divTabela">
+        <table class="tabela_escanor">
+          <tr><th>Poder Total:</th><td>144.000+ (Praticamente invencível ao meio-dia)</td></tr>
+          <tr><th>Magia:</th><td>60.000</td></tr>
+          <tr><th>Força:</th><td>53.000</td></tr>
+          <tr><th>Espírito:</th><td>53.000</td></tr>
+          <tr><th>Poder à Noite:</th><td>15</td></tr>
+        </table>
+      </div>
+    </section>
 
-      
-        <div class="ConteudoEscanor">
-          <img class="imgEscanor" src="img/escanor.jpg" alt="foto personagem escanor">
+    <section class="secao" id="sobre">
+      <h2>Sobre o Herói</h2>
+      <div class="sobre-conteudo">
+        <img class="avatar" src="img/escanor.jpg" alt="Retrato de Escanor">
+        <p>Escanor é o Pecado do Orgulho, o Leão, um dos Sete Pecados Capitais. À noite ele é um homem tímido, gentil e poético. Conforme o sol sobe, a graça Sunshine faz o poder dele crescer até o meio-dia, quando ele fica quase invencível e extremamente orgulhoso.</p>
+      </div>
+    </section>
 
-          <div class="infoEscanor">
-              <h1>ESCANOR</h1>
-              <nav>
-                <ul class="atributos" >
-                  <li><a href="#Atributos">Atributos</a></li><br>
-                  <li><a href="#Habilidades">Habilidades</a></li><br>
-                  <li><a href="#INVETARIOeCONQUISTAS">Inventário & Conquistas</a></li><br>
-                </ul>
-              </nav>
-          </div>
+    <section class="secao" id="atributos">
+      <h2>Atributos</h2>
 
-          <div class="divTabela">
-              <table  class="tabela_escanor" border="1">
-                  <tr>
-                    <th>Poder Total:</th>
-                    <td>144.000+ (Praticamente invencível meio-dia)</td>
-                  </tr>
-                  <tr>
-                    <th>Magia:</th>
-                    <td>60.000</td>
-                  </tr>
-                  <tr>
-                    <th>Força:</th>
-                    <td>53.000</td>
-                  </tr>
-                  <tr>
-                    <th>Espírito:</th>
-                    <td>53.000</td>
-                  </tr>
-                    <tr>
-                    <th>Poder À Noite:  </th>
-                    <td>15</td>
-                  </tr>
-              </table>
-          </div>
+      <div class="barras">
+        <div class="barra-atributo">
+          <p><i class="fa-solid fa-wand-magic-sparkles"></i> Magia: 60.000</p>
+          <div class="barra-fundo"><div class="barra-preenchida" style="width: 100%"></div></div>
         </div>
-
-        <hr>
-
-       <div class="max">
-  <section id="Atributos"></section>
-  <h2>ATRIBUTOS</h2>
-
-  <div class="formas">
-    <div class="forma">
-      <h3>🌙 Forma Noturna (Meia-noite)</h3>
-      <ul>
-        <li>Altura: 165 cm</li>
-        <li>Peso: 49 kg</li>
-        <li>Personalidade: tímido, submisso, gentil e poético.</li>
-        <li>Combate: força e velocidade sub-humanas, zero poder mágico.</li>
-      </ul>
-    </div>
-
-    <div class="forma">
-      <h3>🌞 Forma Diurna (Auge ao Meio-dia)</h3>
-      <ul>
-        <li>Altura: até 325 cm</li>
-        <li>Peso: até 355 kg</li>
-        <li>Personalidade: extremamente arrogante, orgulhoso e imponente.</li>
-        <li>Combate: superforça, velocidade da luz/FTL, resistência a altas temperaturas.</li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-        <hr>
-              <div class="max">
-        <section id="Habilidades"></section>
-        <h2>HABILIDADES</h2>
-
-        <div class="habilidades">
-
-     <video loop autoplay muted class="video" src="Sunshine - Trim.mp4">
-        Seu navegador não suporta vídeo em HTML.
-     </video>
-
-  <ul class="listaHabilidades">
-    <li>☀️ <strong>Sunshine</strong> — Graça concedida pelo Arcanjo Mael que aumenta progressivamente o poder de Escanor conforme o Sol se aproxima do meio-dia.</li>
-    <li>🔥 <strong>Reação Solar</strong> — Concentra uma enorme quantidade de calor em seu corpo, aumentando sua força e temperatura.</li>
-    <li>☀️ <strong>Cruel Sun</strong> — Cria uma esfera de energia solar extremamente quente que pode ser lançada contra o inimigo.</li>
-    <li>⚔️ <strong>Divine Sword Escanor</strong> — Golpe físico extremamente poderoso utilizando sua força amplificada.</li>
-    <li>🪓 <strong>Rhitta</strong> — Machado sagrado capaz de armazenar a energia solar absorvida por Escanor.</li>
-    <li>👑 <strong>The One</strong> — Durante aproximadamente um minuto ao meio-dia, Escanor alcança seu estado máximo.</li>
-    <li>👑🔥 <strong>The One: Ultimate</strong> — Forma final em que Escanor utiliza sua própria força vital para manter o poder de The One.</li>
-    <li>💥 <strong>Full Counter físico</strong> — Escanor consegue devolver ataques físicos utilizando sua força bruta, embora não seja a habilidade mágica tradicional de Meliodas.</li>
-    <li>🌡️ <strong>Corpo Solar</strong> — Seu corpo pode atingir temperaturas extremas sem sofrer os efeitos normais do calor.</li>
-  </ul>
-
-</div>
-<hr>            
-        <div class="max">
-  <section id="INVETARIOeCONQUISTAS"></section>
-  <h2>Inventário & Conquistas</h2>
-
-  <div class="inv-conq">
-
-    <div class="bloco">
-      <h3>🎒 Inventário</h3>
-
-      <div class="item">
-        <img src="img/machado escanor.png" alt="Machado Rhitta">
-        <div class="item-texto">
-          <h4>Rhitta</h4>
-          <p>Um machado gigante de uma mão com lâmina em formato de lua crescente.</p>
+        <div class="barra-atributo">
+          <p><i class="fa-solid fa-hand-fist"></i> Força: 53.000</p>
+          <div class="barra-fundo"><div class="barra-preenchida" style="width: 88%"></div></div>
+        </div>
+        <div class="barra-atributo">
+          <p><i class="fa-solid fa-star"></i> Espírito: 53.000</p>
+          <div class="barra-fundo"><div class="barra-preenchida" style="width: 88%"></div></div>
+        </div>
+        <div class="barra-atributo">
+          <p><i class="fa-solid fa-moon"></i> Poder à noite: 15</p>
+          <div class="barra-fundo"><div class="barra-preenchida" style="width: 2%"></div></div>
         </div>
       </div>
-    </div>
 
-    <div class="bloco">
-      <h3>🏆 Conquistas</h3>
+      <div class="formas">
+        <div class="forma">
+          <h3><i class="fa-solid fa-moon"></i> Forma Noturna (Meia-noite)</h3>
+          <ul>
+            <li>Altura: 165 cm</li>
+            <li>Peso: 49 kg</li>
+            <li>Personalidade: tímido, submisso, gentil e poético.</li>
+            <li>Combate: força e velocidade sub-humanas, zero poder mágico.</li>
+          </ul>
+        </div>
 
-      <ul class="listaConquistas">
+        <div class="forma">
+          <h3><i class="fa-solid fa-sun"></i> Forma Diurna (Auge ao Meio-dia)</h3>
+          <ul>
+            <li>Altura: até 325 cm</li>
+            <li>Peso: até 355 kg</li>
+            <li>Personalidade: extremamente arrogante, orgulhoso e imponente.</li>
+            <li>Combate: superforça, velocidade da luz/FTL, resistência a altas temperaturas.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="habilidades">
+      <h2>Habilidades</h2>
+
+      <div class="habilidades">
+        <video loop autoplay muted playsinline class="video" src="img/Sunshine - Trim.mp4">
+          Seu navegador não suporta vídeo em HTML.
+        </video>
+
+        <ul class="listaHabilidades">
+          <li>☀️ <strong>Sunshine</strong> — Graça concedida pelo Arcanjo Mael que aumenta progressivamente o poder de Escanor conforme o Sol se aproxima do meio-dia.</li>
+          <li>🔥 <strong>Reação Solar</strong> — Concentra uma enorme quantidade de calor em seu corpo, aumentando sua força e temperatura.</li>
+          <li>☀️ <strong>Cruel Sun</strong> — Cria uma esfera de energia solar extremamente quente que pode ser lançada contra o inimigo.</li>
+          <li>⚔️ <strong>Divine Sword Escanor</strong> — Golpe físico extremamente poderoso utilizando sua força amplificada.</li>
+          <li>🪓 <strong>Rhitta</strong> — Machado sagrado capaz de armazenar a energia solar absorvida por Escanor.</li>
+          <li>👑 <strong>The One</strong> — Durante aproximadamente um minuto ao meio-dia, Escanor alcança seu estado máximo.</li>
+          <li>👑🔥 <strong>The One: Ultimate</strong> — Forma final em que Escanor utiliza sua própria força vital para manter o poder de The One.</li>
+          <li>💥 <strong>Full Counter físico</strong> — Escanor consegue devolver ataques físicos utilizando sua força bruta, embora não seja a habilidade mágica tradicional de Meliodas.</li>
+          <li>🌡️ <strong>Corpo Solar</strong> — Seu corpo pode atingir temperaturas extremas sem sofrer os efeitos normais do calor.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="secao" id="inventario">
+      <h2>Inventário &amp; Conquistas</h2>
+
+      <h3><i class="fa-solid fa-bag-shopping"></i> Inventário</h3>
+      <div class="grade">
+        <div class="item">
+          <img src="img/machado escanor.png" alt="Machado Rhitta, com lâmina em formato de lua crescente">
+          <div class="item-texto">
+            <span class="raridade lendario">Lendário</span>
+            <h4>Rhitta</h4>
+            <p>Um machado gigante de uma mão com lâmina em formato de lua crescente.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="img/brasa.webp" alt="Brasão do Leão">
+          <div class="item-texto">
+            <span class="raridade raro">Raro</span>
+            <h4>Brasão do Leão</h4>
+            <p>Marca do Pecado do Orgulho, o leão que identifica o herói.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="img/roupa.jpg" alt="Brasão do Leão">
+          <div class="item-texto">
+            <span class="raridade comum">Comum</span>
+            <h4>Vestes de Escanor</h4>
+            <p>Roupas simples usadas na forma noturna, quando ele é tímido e gentil.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3><i class="fa-solid fa-trophy"></i> Conquistas</h3>
+      <ul class="grade">
         <li>⚔️ Derrotou Galand, mesmo após ele utilizar sua habilidade Critical Over.</li>
         <li>🔥 Dominou Estarossa durante o confronto em Camelot, deixando clara a diferença de poder entre eles.</li>
         <li>💪 Enfrentou Zeldris e conseguiu resistir a ataques extremamente poderosos.</li>
         <li>👑 Enfrentou o Rei Demônio utilizando The One.</li>
       </ul>
-    </div>
+    </section>
 
-  </div>
-</div>
+    <section class="secao" id="contato">
+      <h2>Contato com a Guilda</h2>
+      <p>Quer recrutar o herói ou entrar para a guilda? Mande uma mensagem.</p>
+
+      <form class="form-contato" onsubmit="return false;">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com">
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+
+        <button type="submit" class="botao-contato">Enviar mensagem</button>
+      </form>
+
+      <a class="link-guilda" href="https://discord.com" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Entrar na guilda no Discord</a>
+    </section>
+  </main>
+
+  <footer>© - Todos os direitos reservados</footer>
+
+  <script src="js/script.js"></script>
 </body>
-<hr>
-<footer>© - Todos os direitos reservados </footer>
 </html>
