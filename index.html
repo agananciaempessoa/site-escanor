@@ -20,9 +20,19 @@
       </div>
     </form>
 
+    <div class="acoes-topo">
+      <button type="button" class="btn-tema" id="btnTema" aria-label="Alternar modo noturno">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+      <button type="button" class="btn-menu" id="btnMenu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+
     <nav>
-      <ul class="menu">
+      <ul class="menu" id="menuNav">
         <li><a href="#sobre">Sobre o Herói</a></li>
+        <li><a href="#atributos">Atributos</a></li>
+        <li><a href="#inventario">Inventário</a></li>
         <li><a href="#contato">Contato</a></li>
         <li><a href="html/login.html">Login</a></li>
       </ul>
@@ -34,6 +44,7 @@
       <img class="imgEscanor" src="img/escanor.jpg" alt="Escanor de costas com o braço levantado">
 
       <div class="infoEscanor">
+        <p class="saudacao" id="saudacao"></p>
         <h1>ESCANOR</h1>
         <nav>
           <ul class="links-topo">
@@ -60,7 +71,15 @@
       <h2>Sobre o Herói</h2>
       <div class="sobre-conteudo">
         <img class="avatar" src="img/escanor.jpg" alt="Retrato de Escanor">
-        <p>Escanor é o Pecado do Orgulho, o Leão, um dos Sete Pecados Capitais. À noite ele é um homem tímido, gentil e poético. Conforme o sol sobe, a graça Sunshine faz o poder dele crescer até o meio-dia, quando ele fica quase invencível e extremamente orgulhoso.</p>
+        <div class="sobre-texto">
+          <p>Escanor é o Pecado do Orgulho, o Leão, um dos Sete Pecados Capitais. À noite ele é um homem tímido, gentil e poético. Conforme o sol sobe, a graça Sunshine faz o poder dele crescer até o meio-dia, quando ele fica quase invencível e extremamente orgulhoso.</p>
+
+          <p class="historia-extra" id="historiaExtra">
+            Nascido como príncipe do Reino de Castellio, Escanor foi temido e expulso pela própria família quando seu poder começou a despertar. Depois de vagar sozinho, foi acolhido por Meliodas e Merlin, tornando-se o último integrante dos Sete Pecados Capitais. Apesar da arrogância durante o dia, ele valoriza profundamente seus companheiros e está sempre disposto a se sacrificar por eles.
+          </p>
+
+          <button type="button" class="btn-ver-mais" id="btnVerMais">Ver história completa</button>
+        </div>
       </div>
     </section>
 
@@ -84,6 +103,18 @@
           <p><i class="fa-solid fa-moon"></i> Poder à noite: 15</p>
           <div class="barra-fundo"><div class="barra-preenchida" style="width: 2%"></div></div>
         </div>
+      </div>
+
+      <div class="xp-box">
+        <h3><i class="fa-solid fa-fire"></i> Experiência (Nível <span id="nivelHeroi">1</span>)</h3>
+        <p id="textoXp">0 / 100 XP</p>
+        <div class="barra-fundo">
+          <div class="barra-preenchida barra-xp" id="barraXp" style="width: 0%"></div>
+        </div>
+        <div class="xp-acoes">
+          <button type="button" class="botao-contato" id="btnXp">Completar missão (+25 XP)</button>
+        </div>
+        <p class="msg-xp" id="msgXp"></p>
       </div>
 
       <div class="formas">
@@ -135,34 +166,16 @@
       <h2>Inventário &amp; Conquistas</h2>
 
       <h3><i class="fa-solid fa-bag-shopping"></i> Inventário</h3>
-      <div class="grade">
-        <div class="item">
-          <img src="img/machado escanor.png" alt="Machado Rhitta, com lâmina em formato de lua crescente">
-          <div class="item-texto">
-            <span class="raridade lendario">Lendário</span>
-            <h4>Rhitta</h4>
-            <p>Um machado gigante de uma mão com lâmina em formato de lua crescente.</p>
-          </div>
-        </div>
+      <p class="contador-itens" id="contadorItens"></p>
 
-        <div class="item">
-          <img src="img/brasa.webp" alt="Brasão do Leão">
-          <div class="item-texto">
-            <span class="raridade raro">Raro</span>
-            <h4>Brasão do Leão</h4>
-            <p>Marca do Pecado do Orgulho, o leão que identifica o herói.</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="img/roupa.jpg" alt="Brasão do Leão">
-          <div class="item-texto">
-            <span class="raridade comum">Comum</span>
-            <h4>Vestes de Escanor</h4>
-            <p>Roupas simples usadas na forma noturna, quando ele é tímido e gentil.</p>
-          </div>
-        </div>
+      <div class="filtros-inventario">
+        <button type="button" class="btn-filtro ativo" data-filtro="todos">Todos</button>
+        <button type="button" class="btn-filtro" data-filtro="arma">Armas</button>
+        <button type="button" class="btn-filtro" data-filtro="acessorio">Acessórios</button>
+        <button type="button" class="btn-filtro" data-filtro="equipamento">Equipamentos</button>
       </div>
+
+      <div class="grade" id="listaInventario"></div>
 
       <h3><i class="fa-solid fa-trophy"></i> Conquistas</h3>
       <ul class="grade">
@@ -177,7 +190,7 @@
       <h2>Contato com a Guilda</h2>
       <p>Quer recrutar o herói ou entrar para a guilda? Mande uma mensagem.</p>
 
-      <form class="form-contato" onsubmit="return false;">
+      <form class="form-contato" id="formContato" novalidate>
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome">
 
@@ -188,6 +201,7 @@
         <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
 
         <button type="submit" class="botao-contato">Enviar mensagem</button>
+        <p class="msg-contato" id="msgContato"></p>
       </form>
 
       <a class="link-guilda" href="https://discord.com" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i> Entrar na guilda no Discord</a>
