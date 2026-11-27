@@ -129,7 +129,7 @@ textarea:focus-visible {
 }
 
 
-/* topo da pagina: foto, titulo e tabela */
+/* foto, titulo e tabela */
 .ConteudoEscanor {
   min-height: calc(100vh - 200px);
   position: relative;
@@ -227,7 +227,7 @@ td {
 }
 
 
-/* atributos: as barras */
+/* as barras */
 .barras {
   width: 100%;
   max-width: 700px;
@@ -612,5 +612,201 @@ footer {
   .grade,
   .listaHabilidades {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* parte 2: tema noturno, menu mobile, ver mais, xp, filtros e contato */
+body.modo-noturno {
+  --fundo: #070b18;
+  --fundo2: #101935;
+  --dourado: #6fa8ff;
+  --laranja: #3b7ddd;
+}
+
+.acoes-topo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-tema,
+.btn-menu {
+  background: transparent;
+  border: 2px solid var(--dourado);
+  color: var(--dourado);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-tema:hover,
+.btn-menu:hover {
+  background: var(--dourado);
+  color: var(--fundo);
+}
+
+.btn-menu {
+  display: none;
+}
+
+.saudacao {
+  margin: 0 0 0 100px;
+  font-size: 20px;
+  color: var(--dourado);
+}
+
+/* sobre o heroi - historia completa */
+.sobre-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.historia-extra {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+}
+
+.historia-extra.revelado {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.btn-ver-mais {
+  margin-top: 14px;
+  padding: 10px 20px;
+  border: 2px solid var(--dourado);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--dourado);
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-ver-mais:hover {
+  background: var(--dourado);
+  color: var(--fundo);
+}
+
+/* barra de xp */
+.xp-box {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: var(--card);
+  border: 2px solid var(--dourado);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.barra-xp {
+  transition: width 0.3s ease;
+}
+
+.xp-acoes {
+  margin-top: 16px;
+}
+
+.msg-xp {
+  min-height: 24px;
+  margin: 12px 0 0;
+  color: var(--dourado);
+  font-size: 18px;
+}
+
+/* filtros do inventario */
+.contador-itens {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: var(--dourado);
+}
+
+.filtros-inventario {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.btn-filtro {
+  padding: 8px 18px;
+  border: 2px solid var(--dourado);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--branco);
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-filtro:hover,
+.btn-filtro.ativo {
+  background: var(--dourado);
+  color: var(--fundo);
+}
+
+/* mensagem do formulario */
+.msg-contato {
+  min-height: 24px;
+  margin-top: 12px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.msg-contato.erro {
+  color: #ff6b6b;
+}
+
+.msg-contato.sucesso {
+  color: #6ee7b7;
+}
+
+@media screen and (max-width: 1024px) {
+  .saudacao {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .saudacao {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .btn-menu {
+    display: inline-block;
+  }
+
+  .cabecalho nav {
+    width: 100%;
+    order: 4;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 0;
+    border-top: 1px solid var(--dourado);
+  }
+
+  .menu.aberto {
+    display: flex;
+  }
+
+  .sobre-texto {
+    align-items: center;
   }
 }
